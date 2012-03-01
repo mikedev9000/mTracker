@@ -111,6 +111,8 @@ require LITHIUM_LIBRARY_PATH . '/lithium/storage/cache/adapter/Apc.php';
  */
 Libraries::add('lithium');
 
+Libraries::add('wilson');
+
 /**
  * Add the application.  You can pass a `'path'` key here if this bootstrap file is outside of
  * your main application, but generally you should not need to change any settings.

@@ -40,11 +40,11 @@ use lithium\data\Connections;
 /**
  * Uncomment this configuration to use MongoDB as your default database.
  */
-// Connections::add('default', array(
-// 	'type' => 'MongoDb',
-// 	'host' => 'localhost',
-// 	'database' => 'my_app'
-// ));
+Connections::add('passManager', array(
+    'type' => 'MongoDb',
+    'host' => 'localhost',
+    'database' => 'passManager_mTracker'
+));
 
 /**
  * Uncomment this configuration to use CouchDB as your default database.

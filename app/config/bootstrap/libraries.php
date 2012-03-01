@@ -111,6 +111,7 @@ require LITHIUM_LIBRARY_PATH . '/lithium/storage/cache/adapter/Apc.php';
  */
 Libraries::add('lithium');
 
+Libraries::add('passManager');
 Libraries::add('wilson');
 
 /**

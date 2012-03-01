@@ -46,6 +46,13 @@ Connections::add('passManager', array(
     'database' => 'passManager_mTracker'
 ));
 
+
+Connections::add('default', array(
+    'type' => 'MongoDb',
+    'host' => 'localhost',
+    'database' => 'app_mTracker'
+));
+
 /**
  * Uncomment this configuration to use CouchDB as your default database.
  */

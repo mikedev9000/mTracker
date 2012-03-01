@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", 1);
 /**
  * Lithium: the most rad php framework
  *

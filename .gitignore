@@ -1,4 +1,4 @@
-app/resources/tmp/*
+app/resources/*
 .buildpath
 .project
 .settings/

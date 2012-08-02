@@ -1,3 +1,9 @@
 [submodule "lib/lithium"]
 	path = lib/lithium
 	url = git@github.com:mikedev9000/lithium.git
+[submodule "lib/flash"]
+	path = lib/flash
+	url = git@github.com:mikedev9000/li3_flash.git
+[submodule "lib/swift"]
+	path = lib/swift
+	url = git@github.com:mikedev9000/li3_swift.git

@@ -1,6 +1,6 @@
 <?php
 
-error_reporting( 1 );
+error_reporting( E_ALL );
 
 /**
  * Lithium: the most rad php framework

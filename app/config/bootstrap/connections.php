@@ -2,7 +2,7 @@
 /**
  * Lithium: the most rad php framework
  *
- * @copyright     Copyright 2011, Union of RAD (http://union-of-rad.org)
+ * @copyright     Copyright 2012, Union of RAD (http://union-of-rad.org)
  * @license       http://opensource.org/licenses/bsd-license.php The BSD License
  */
 
@@ -40,11 +40,11 @@ use lithium\data\Connections;
 /**
  * Uncomment this configuration to use MongoDB as your default database.
  */
-Connections::add('passManager', array(
-    'type' => 'MongoDb',
-    'host' => 'localhost',
-    'database' => 'passManager_mTracker'
-));
+// Connections::add('default', array(
+// 	'type' => 'MongoDb',
+// 	'host' => 'localhost',
+// 	'database' => 'my_app'
+// ));
 
 /**
  * Uncomment this configuration to use CouchDB as your default database.

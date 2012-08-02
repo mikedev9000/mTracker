@@ -2,7 +2,7 @@
 /**
  * Lithium: the most rad php framework
  *
- * @copyright     Copyright 2011, Union of RAD (http://union-of-rad.org)
+ * @copyright     Copyright 2012, Union of RAD (http://union-of-rad.org)
  * @license       http://opensource.org/licenses/bsd-license.php The BSD License
  */
 
@@ -59,7 +59,7 @@ define('LITHIUM_APP_PATH', dirname(dirname(__DIR__)));
  * directory as your application.  If you use the same libraries in multiple applications, you can
  * set this to a shared path on your server.
  */
-define('LITHIUM_LIBRARY_PATH', dirname(LITHIUM_APP_PATH) . '/libraries');
+define('LITHIUM_LIBRARY_PATH', dirname(LITHIUM_APP_PATH) . '/lib');
 
 /**
  * Locate and load Lithium core library files.  Throws a fatal error if the core can't be found.
@@ -68,7 +68,7 @@ define('LITHIUM_LIBRARY_PATH', dirname(LITHIUM_APP_PATH) . '/libraries');
 if (!include LITHIUM_LIBRARY_PATH . '/lithium/core/Libraries.php') {
 	$message  = "Lithium core could not be found.  Check the value of LITHIUM_LIBRARY_PATH in ";
 	$message .= __FILE__ . ".  It should point to the directory containing your ";
-	$message .= "/libraries directory.";
+	$message .= "/lib directory.";
 	throw new ErrorException($message);
 }
 
@@ -110,6 +110,10 @@ require LITHIUM_LIBRARY_PATH . '/lithium/storage/cache/adapter/Apc.php';
  * generally should not need to override any settings.
  */
 Libraries::add('lithium');
+
+Libraries::add('flash');
+
+Libraries::add('swift');
 
 Libraries::add('wilson');
 

@@ -2,7 +2,7 @@
 /**
  * Lithium: the most rad php framework
  *
- * @copyright     Copyright 2011, Union of RAD (http://union-of-rad.org)
+ * @copyright     Copyright 2012, Union of RAD (http://union-of-rad.org)
  * @license       http://opensource.org/licenses/bsd-license.php The BSD License
  */
 
@@ -255,3 +255,23 @@ $checks = array(
 		<?php echo $this->html->link('Wiki', 'https://github.com/UnionOfRAD/lithium/wiki'); ?>.
 	</li>
 </ul>
+
+<hr/>
+
+<h4>Form appearance.</h4>
+
+<div>
+
+    <?=$this->form->create();?>
+
+        <?=$this->form->field( 'test text' );?>
+
+        <?=$this->form->field( 'text textarea', array( 'type' => 'textarea' ) );?>
+
+        <?=$this->form->field( 'test select', array( 'list' => array( 'option1', 'option2', 'option3' ) ) );?>
+
+        <?=$this->form->submit('Submit');?>
+
+    <?=$this->form->end();?>
+
+</div>

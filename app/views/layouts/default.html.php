@@ -11,8 +11,10 @@
 <head>
 	<?php echo $this->html->charset();?>
 	<title>Application &gt; <?php echo $this->title(); ?></title>
+	<link rel="stylesheet/less" type="text/css" href="/less/app.less">
 	<?php echo $this->html->style(array('debug', 'lithium', 'smoothness/jquery-ui-1.8.18.custom')); ?>
     <?php echo $this->scripts(); ?>
+    <script type="text/javascript" src="/js/less-1.3.0.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>

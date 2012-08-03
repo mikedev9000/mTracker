@@ -2,18 +2,36 @@
 
 namespace app\controllers;
 
-class EntitiesController extends \lithium\action\Controller
+class RestController extends \lithium\action\Controller
 {    
-    public function all()
+    public function api()
+    {
+        $models = array();
+        
+        foreach( \lithium\core\Libraries::locate('models') as $model )
+        {
+            //TODO build out the api (functions from the class)
+            $models[str_replace('\\', '-', $model)] = array(
+                'model' => array(),
+                'entity' => array(),
+            );
+        }
+        
+        return compact( 'models' );
+    }
+    
+    public function model()
     {
         $model = $this->request->model;
         
-        $all = $model::all();
+        $function = isset( $this->request->function ) ? $this->request->function : 'all';
         
-        return compact( 'model', 'all' );
+        $result = $model::$function();
+        
+        return compact( 'result' );
     }
     
-    public function one(  )
+    public function entity()
     {
         $model = $this->request->model;
         

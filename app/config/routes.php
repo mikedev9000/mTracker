@@ -8,6 +8,12 @@ if (!Environment::is('production')) {
 	Router::connect('/test', array('controller' => 'lithium\test\Controller'));
 }
 
+Router::connect("/rest/api", array( 
+	'controller' => 'rest', 
+	'action' => 'api',
+    'type' => 'json',
+));
+
 /**
  * RESTful api routes for Mongo objects
  * 
@@ -16,22 +22,22 @@ if (!Environment::is('production')) {
 foreach( \lithium\core\Libraries::locate('models') as $model )
 {
     $model_slug = str_replace('\\', '-', $model);
-    
-    Router::connect("rest/{$model_slug}", array( 
-    	'controller' => 'Entities', 
-    	'action' => 'all',
+
+    Router::connect("/rest/{$model_slug}", array( 
+    	'controller' => 'rest', 
+    	'action' => 'model',
         'type' => 'json',
+        'model' => $model,
     ));
     
-    Router::connect("rest/{$model_slug}/{:id:[0-9a-f]{24}}/{:function}", array( 
-    	'controller' => 'Entities', 
-    	'action' => 'one',
+    Router::connect("/rest/{$model_slug}/{:id:[0-9a-f]{24}}/{:function}", array( 
+    	'controller' => 'rest', 
+    	'action' => 'entity',
         'model' => $model,
         'function' => null,
         'type' => 'json',
     ));
 }
-
 
 Router::connect('/', 'Pages::view');
 Router::connect('/{:args}', 'Pages::view');

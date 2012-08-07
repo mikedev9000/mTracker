@@ -2,3 +2,4 @@ app/resources/*
 .buildpath
 .project
 .settings/
+/nbproject/*

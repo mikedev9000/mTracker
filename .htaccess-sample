@@ -1,0 +1,8 @@
+## general application setup
+SetEnv APP_ENVIRONMENT <development,testing,production>
+SetEnv APP_URL <url>
+
+## database setup
+SetEnv DBHOST <hostname>
+SetEnv DBUSER <username>
+SetEnv DBPASS <password>

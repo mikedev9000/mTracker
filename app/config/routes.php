@@ -9,9 +9,8 @@ if (!Environment::is('production')) {
 }
 
 Router::connect("/rest/api", array( 
-	'controller' => 'rest', 
-	'action' => 'api',
-    'type' => 'json',
+    'controller' => 'rest', 
+    'action' => 'api',
 ));
 
 /**
@@ -26,7 +25,6 @@ foreach( \lithium\core\Libraries::locate('models') as $model )
     Router::connect("/rest/{$model_slug}", array( 
     	'controller' => 'rest', 
     	'action' => 'model',
-        'type' => 'json',
         'model' => $model,
     ));
     
@@ -35,7 +33,6 @@ foreach( \lithium\core\Libraries::locate('models') as $model )
     	'action' => 'entity',
         'model' => $model,
         'function' => null,
-        'type' => 'json',
     ));
 }
 

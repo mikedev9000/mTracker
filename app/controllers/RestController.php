@@ -4,6 +4,22 @@ namespace app\controllers;
 
 class RestController extends \lithium\action\Controller
 {    
+    /**
+     * Initialize the controller and set the type to json
+     */
+    public function _init()
+    {
+        parent::_init();
+        
+        $this->request->type = 'json';
+    }
+    
+    /**
+     * Provides a listing of all models available to
+     * the application.
+     * 
+     * @return array 
+     */
     public function api()
     {
         $models = array();

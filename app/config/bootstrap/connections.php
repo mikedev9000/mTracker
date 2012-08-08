@@ -38,11 +38,11 @@
 use lithium\data\Connections;
 
 Connections::add('default', array(
-	'type' => 'MongoDb',
-	'host' => '127.0.0.1',
-	'database' => 'mTracker',
-    'login' => '',
-    'password' => ''
+    'type' => 'MongoDb',
+    'host' => getenv('DBHOST'),
+    'database' => getenv('DBNAME'),
+    'login' => getenv('DBUSER'),
+    'password' => getenv('DBPASS'),
 ));
 
 ?>

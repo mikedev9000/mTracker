@@ -3,3 +3,4 @@ app/resources/*
 .project
 .settings/
 /nbproject/*
+.htaccess

@@ -7,3 +7,6 @@
 [submodule "lib/swift"]
 	path = lib/swift
 	url = git@github.com:mikedev9000/li3_swift.git
+[submodule "lib/li3_users"]
+	path = lib/li3_users
+	url = git@github.com:mikedev9000/li3_users.git

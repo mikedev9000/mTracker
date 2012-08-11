@@ -4,3 +4,4 @@ app/resources/*
 .settings/
 /nbproject/*
 .htaccess
+lib/li3_docs

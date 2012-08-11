@@ -111,10 +111,6 @@ require LITHIUM_LIBRARY_PATH . '/lithium/storage/cache/adapter/Apc.php';
  */
 Libraries::add('lithium');
 
-Libraries::add('flash');
-
-Libraries::add('swift');
-
 /**
  * Add the application.  You can pass a `'path'` key here if this bootstrap file is outside of
  * your main application, but generally you should not need to change any settings.
@@ -124,6 +120,12 @@ Libraries::add('app', array('default' => true));
 /**
  * Add some plugins:
  */
-// Libraries::add('li3_docs');
+Libraries::add('li3_docs');
+
+Libraries::add('flash');
+
+Libraries::add('swift');
+
+Libraries::add('li3_users');
 
 ?>
